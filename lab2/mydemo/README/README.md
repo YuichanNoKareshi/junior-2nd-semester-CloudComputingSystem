@@ -109,3 +109,23 @@ uint16_t nb_tx = rte_eth_tx_burst(0, 0, tx_pkts, BURST_SIZE);
 + ether、ip、udp三层一层都不能少
 + 注意大小端，否则会有错
 + 在rte_ip.h中有ip的checksum函数，但是rte_udp.h中没有udp的checksum函数，于是随便写了个0
+
+---
+
+## <font color="red">配环境</font>
+
+VMware --- 创建设置虚拟网卡 https://blog.csdn.net/ka_ka314/article/details/78936105
+
+Ubuntu 20.04修改ip地址
+https://blog.csdn.net/jian8182/article/details/106574003/
+其中/etc/netplan/01-installer-config.yaml配置信息
+```c++
+network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:
+    ens33:
+      dhcp4: false
+      addresses: [192.168.80.100/24]
+      gateway4: 192.168.80.1 
+```
