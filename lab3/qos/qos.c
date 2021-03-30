@@ -13,14 +13,7 @@ struct rte_meter_srtcm_params app_srtcm_params = {
 	.cbs = 2048,
 	.ebs = 2048
 };
-struct rte_meter_trtcm_params app_trtcm_params = {
-	.cir = 1000000 * 46,
-	.pir = 1500000 * 46,
-	.cbs = 2048,
-	.pbs = 2048
-};
 struct rte_meter_srtcm_profile app_srtcm_profile;
-struct rte_meter_trtcm_profile app_trtcm_profile;
 
 struct rte_meter_srtcm app_flows[APP_FLOWS_MAX];
 
@@ -40,11 +33,6 @@ qos_meter_init(void)
 
 	ret = rte_meter_srtcm_profile_config(&app_srtcm_profile,
 		&app_srtcm_params);
-	if (ret)
-		return ret;
-
-	ret = rte_meter_trtcm_profile_config(&app_trtcm_profile,
-		&app_trtcm_params);
 	if (ret)
 		return ret;
 
