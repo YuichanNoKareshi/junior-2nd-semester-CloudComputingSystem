@@ -1,0 +1,16 @@
+# enter the files/directories that do not need to be committed
+*.class
+*.exe
+*.o
+.vscode/
+.idea/
+target/
+.DS_Store
+log/
+/code/chunkserver/8100/
+/code/chunkserver/8101/
+/code/chunkserver/8102/
+/code/chunkserver/8103/
+/code/chunkserver/8104/
+/code/chunkserver/8105/
+

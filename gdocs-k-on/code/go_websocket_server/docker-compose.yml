@@ -1,0 +1,8 @@
+version: '2'
+services:
+    test-websocket:
+        image: test-docker-go-1
+        restart: always
+        container_name: test-websocket
+        ports:
+            - "8080:8080"

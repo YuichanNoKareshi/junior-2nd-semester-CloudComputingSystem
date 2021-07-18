@@ -1,0 +1,21 @@
+.STR_top
+{
+    width: 820px
+;
+    height: 100%
+;
+    background-color: #fafafa
+;
+    padding: 6px 0px;
+}
+
+.STR_Blower {
+    float: left;
+    line-height: 25px;
+    margin-top: 2px;
+    height: 85px;
+    color: #939393;
+    background-color: #fff;
+    width: 820px;
+    overflow: hidden;
+}
